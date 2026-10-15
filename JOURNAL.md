@@ -3,7 +3,7 @@ title: "Kaze."
 github: "https://github.com/Flux3tor/Kaze"
 description: "A 65% wireless mechanical keyboard."
 created_at: "2026-10-07"
-total_time: "10h"
+total_time: "15h"
 ---
 
 # October 7, 2026: parts hunt!
@@ -53,3 +53,19 @@ next up: **PCB layout**.
 ![](https://fabricate.hackclub-assets.com/68e0bbbda73a226a6d7d7dc3b2dfb476c8695472de4f3f202f31ad4a2850537b/image-png/kaze.png)
 
 **Total time spent: 4h**
+
+# October 15, 2026: PCB done!
+<!-- fabricate:entry 488 -->
+
+now i finally finished the PCB design for Kaze!! after all the schematic work, component placement, figuring out footprints and routing, the design is finally finalised.
+
+i made a bunch of changes along the way too. i removed the LEDs entirely and switched back to a wired Raspberry Pi Pico setup instead of wireless. basically, i'm keeping things simpler and focusing on getting the keyboard working properly rather than adding features just for the sake of it.
+
+the component placement is done, the PCB design is finalised, and i've started locking in the actual parts i'll be using. i'm looking at the Akko V3 Fairy Pro silent switches, Durock stabilizers, Lakes Mountains PBT keycaps and the other bits needed to bring Kaze to life.
+
+**next up:** designing the case! gotta figure out how the PCB, switches and everything else will fit together and give Kaze a proper look.
+
+![](https://fabricate.hackclub-assets.com/5b3dc5d881adbb0112292c2902fb4b290991c19ca583f4d23cf4772bdebcd0f0/image-png/Screenshot%202026-10-15%20at%2010.32.51%E2%80%AFPM.png)
+![](https://fabricate.hackclub-assets.com/96a1b1478c860e009688070f9f8338a7724addc2775445421d040ae804261d31/image-png/kaze-1.png)
+
+**Total time spent: 5h**
