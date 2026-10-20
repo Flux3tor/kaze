@@ -3,7 +3,7 @@ title: "Kaze."
 github: "https://github.com/Flux3tor/Kaze"
 description: "A 65% wireless mechanical keyboard."
 created_at: "2026-10-07"
-total_time: "17h"
+total_time: "19h"
 ---
 
 # October 7, 2026: parts hunt!
@@ -83,5 +83,22 @@ it's finally starting to look like an actual keyboard instead of just a bunch of
 
 ![](https://fabricate.hackclub-assets.com/edf31d55287a3fb696a85de66574d7920347d929d5f514af542ed4925adc8cdc/image-jpeg/0CDDF687-BB7B-4890-8138-25BED83FCE82_1_201_a.jpeg)
 ![](https://fabricate.hackclub-assets.com/7daa18dc10c628b2ca838354ab6538a946e6e8e860d46245585f132beb88be4e/image-png/image%20%286%29.png)
+
+**Total time spent: 2h**
+
+# October 20, 2026: firmware done!
+<!-- fabricate:entry 766 -->
+
+i went with RMK instead of the usual QMK route, so getting everything set up was a bit of a journey. had to fix the cargo package name, sort out some keymap errors, and get the config right.
+
+after that, i managed to **compile the firmware locally** which successfully builds the UF2 for the raspberry pi pico.
+
+the main thing i wanted to get done was the firmware, and that's done now. the schematic, pcb, case design and bom are also ready, so it's time to submit kaze.
+
+haven't tested the physical keyboard yet, but at least the firmware compiles.
+
+**next up: submitting kaze.**
+
+![](https://fabricate.hackclub-assets.com/e798a1595e27da25e0864d710e492bf8113d3a9d712de30d231a9cda7d0e27e1/image-png/image.png)
 
 **Total time spent: 2h**
