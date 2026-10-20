@@ -526,7 +526,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../Downloads/kaze.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -685,7 +685,7 @@
         "uuid": "656de299-2b57-42af-88e6-7073a770229d"
       }
     ],
-    "used_designators": "U1,SW1-70,J1,#PWR1,A1,C1-80,D1-150,L9-80",
+    "used_designators": "L9-80,D1-150,C1-80,A1,#PWR1,J1,SW1-70,U1",
     "variants": []
   },
   "sheets": [

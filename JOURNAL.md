@@ -3,7 +3,7 @@ title: "Kaze."
 github: "https://github.com/Flux3tor/Kaze"
 description: "A 65% wireless mechanical keyboard."
 created_at: "2026-10-07"
-total_time: "15h"
+total_time: "17h"
 ---
 
 # October 7, 2026: parts hunt!
@@ -69,3 +69,19 @@ the component placement is done, the PCB design is finalised, and i've started l
 ![](https://fabricate.hackclub-assets.com/96a1b1478c860e009688070f9f8338a7724addc2775445421d040ae804261d31/image-png/kaze-1.png)
 
 **Total time spent: 5h**
+
+# October 19, 2026: case design done!
+<!-- fabricate:entry 690 -->
+
+made some solid progress on Kaze today! the case design is finally done, and i also added the silkscreen to the PCB.
+
+for the PCB, i went with a Japanese-inspired aesthetic, adding detailed circuit-style artwork across the board, along with my website, GitHub, and the Kaze branding. also added the 風 character to match the whole theme.
+
+it's finally starting to look like an actual keyboard instead of just a bunch of components on a PCB lol. seeing the board with the silkscreen makes it feel way more personal.
+
+**next up:** firmware! once that's done, i'll submit the whole project for review and hopefully get Kaze one step closer to becoming a real keyboard.
+
+![](https://fabricate.hackclub-assets.com/edf31d55287a3fb696a85de66574d7920347d929d5f514af542ed4925adc8cdc/image-jpeg/0CDDF687-BB7B-4890-8138-25BED83FCE82_1_201_a.jpeg)
+![](https://fabricate.hackclub-assets.com/7daa18dc10c628b2ca838354ab6538a946e6e8e860d46245585f132beb88be4e/image-png/image%20%286%29.png)
+
+**Total time spent: 2h**
