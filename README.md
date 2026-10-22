@@ -22,7 +22,7 @@ I wanted to build my own keyboard instead of buying one off the shelf. kaze is m
 ![Final](Images/PCB-Render.png)
 
 ### Case Render
-![case_bottom](Images/Case-Render.jpeg)
+![case_bottom](Images/Case-Render.png)
 
 ---
 
