@@ -1,13 +1,12 @@
 ---
-title: "Kaze."
-github: "https://github.com/Flux3tor/Kaze"
+title: "kaze."
+github: "https://github.com/Flux3tor/kaze"
 description: "A 65% wired silent mechanical keyboard."
 created_at: "2026-10-07"
 total_time: "18h"
----
+--- 
 
-**# October 7, 2026: parts hunt!**
-<!-- fabricate:entry 184 -->
+# October 7, 2026: parts hunt!
 
 today i started figuring out what parts i actually wanna use for kaze.
 
@@ -41,12 +40,11 @@ here's the updated BOM with the parts i'm planning to use:
 
 the budget is around $112 with any extra shipping or taxes. i'm trying not to spend money on features i don't really need, which is why i went with wired instead of wireless and removed the RGB and O-rings.
 
-![](https://cdn.hackclub.com/01a16177-0cd7-7064-a855-fcd0db6ef671/Screenshot_20250408_021218_Google.jpg.png)
+![](https://fabricate.hackclub-assets.com/b21bfcaf254fa2532044c12d954463cdf0e5eb8ae463baf0a63788beac4fb5fc/image-png/Screenshot_20250408_021218_Google.jpg.png)
 
 **Total time spent: 5h**
 
-**# October 8, 2026: schematic done!**
-<!-- fabricate:entry 202 -->
+# October 8, 2026: schematic done!
 
 i finally finished the kaze schematic.
 
@@ -64,8 +62,7 @@ next up was the PCB layout.
 
 **Total time spent: 4h**
 
-**# October 15, 2026: PCB done!**
-<!-- fabricate:entry 488 -->
+# October 15, 2026: PCB done!
 
 now i finally finished the PCB design for kaze!! after the schematic, i started placing components, sorting out footprints and routing the connections.
 
@@ -84,8 +81,7 @@ next up: designing the case! gotta figure out how everything will fit together a
 
 **Total time spent: 5h**
 
-**# October 19, 2026: case design done!**
-<!-- fabricate:entry 690 -->
+# October 19, 2026: case design done!
 
 i finished the case design and worked on the PCB silkscreen too.
 
@@ -101,13 +97,12 @@ the case and PCB designs are ready for now, but i'll still need to check the fit
 
 next up: firmware! once that's done, i'll have the main designs ready for submission.
 
-![](https://cdn.hackclub.com/01a162fd-a105-7938-9b8f-ceaaf8e3ed8b/Screenshot%202026-10-22%20at%203.03.34%E2%80%AFPM.png)
+![](https://fabricate.hackclub-assets.com/edf31d55287a3fb696a85de66574d7920347d929d5f514af542ed4925adc8cdc/image-jpeg/0CDDF687-BB7B-4890-8138-25BED83FCE82_1_201_a.jpeg)
 ![](https://fabricate.hackclub-assets.com/7daa18dc10c628b2ca838354ab6538a946e6e8e860d46245585f132beb88be4e/image-png/image%20%286%29.png)
 
 **Total time spent: 2h**
 
-**# October 20, 2026: firmware done!**
-<!-- fabricate:entry 766 -->
+# October 20, 2026: firmware done!
 
 i originally planned to use QMK, but i ended up going with RMK instead. getting it set up took a bit of debugging.
 
