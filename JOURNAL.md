@@ -7,6 +7,7 @@ total_time: "18h"
 --- 
 
 # October 7, 2026: parts hunt!
+<!-- fabricate:entry 184 -->
 
 today i started figuring out what parts i actually wanna use for kaze.
 
@@ -45,6 +46,7 @@ the budget is around $112 with any extra shipping or taxes. i'm trying not to sp
 **Total time spent: 5h**
 
 # October 8, 2026: schematic done!
+<!-- fabricate:entry 202 -->
 
 i finally finished the kaze schematic.
 
@@ -63,6 +65,7 @@ next up was the PCB layout.
 **Total time spent: 4h**
 
 # October 15, 2026: PCB done!
+<!-- fabricate:entry 488 -->
 
 now i finally finished the PCB design for kaze!! after the schematic, i started placing components, sorting out footprints and routing the connections.
 
@@ -82,6 +85,7 @@ next up: designing the case! gotta figure out how everything will fit together a
 **Total time spent: 5h**
 
 # October 19, 2026: case design done!
+<!-- fabricate:entry 690 -->
 
 i finished the case design and worked on the PCB silkscreen too.
 
@@ -103,6 +107,7 @@ next up: firmware! once that's done, i'll have the main designs ready for submis
 **Total time spent: 2h**
 
 # October 20, 2026: firmware done!
+<!-- fabricate:entry 766 -->
 
 i originally planned to use QMK, but i ended up going with RMK instead. getting it set up took a bit of debugging.
 
