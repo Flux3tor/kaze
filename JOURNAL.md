@@ -1,103 +1,125 @@
 ---
 title: "Kaze."
 github: "https://github.com/Flux3tor/Kaze"
-description: "A 65% wireless mechanical keyboard."
+description: "A 65% wired silent mechanical keyboard."
 created_at: "2026-10-07"
-total_time: "19h"
+total_time: "18h"
 ---
 
-# October 7, 2026: parts hunt!
+**# October 7, 2026: parts hunt!**
 <!-- fabricate:entry 184 -->
 
 today i started figuring out what parts i actually wanna use for kaze.
 
-i decided on a **65% wired** design with **USB-C** and **QMK**, and after looking through a bunch of stuff i finally settled on the **HMX Taro switches**, **MDA crystal keycaps**, **durock stabilisers**, **Raspberry Pi Pico**, **SK6812-MINI-E leds**, and **1N4148 diodes**.
+i wanted to build a 65% mechanical keyboard with a custom PCB, a 3d printed case and firmware i could customise myself.
 
-i originally wanted kaze to be wireless with an nRF52840 + ZMK and a LiPo, but after realizing how much extra shit that added just for the wireless part, i decided to go wired instead.
+at first, i wanted it to be wireless using an nRF52840, ZMK and a LiPo battery. but then i realised how much extra stuff i'd need just for the wireless part. i'd have to deal with charging, the battery and extra power circuitry, so i decided to go wired with USB-C instead. it's simpler, and i'd rather spend my time getting the keyboard itself working.
 
-this means no battery, no charging circuit, no boost converter, and no power switch. the USB-C connection can just power the board and the LEDs directly, which makes the whole thing way simpler.
+my parts list changed quite a bit too. i initially looked at HMX Taro switches and MDA Crystal keycaps, and i wanted to add SK6812-MINI-E LEDs for RGB lighting. the original plan had 68 LEDs for the keys and another 12 for underglow.
 
-i'm also dropping the hotswap sockets. since i've already settled on the Taro switches, i'll just solder them directly into the PCB.
+later, i decided to remove RGB completely. i didn't really need it, and dropping it meant less stuff to deal with on the PCB. i also changed my switch choice to **Akko V3 Fairy Pro silent switches** and picked **Lakes Mountains Premium Cherry PBT keycaps**. i wanted a quieter keyboard, so silent switches made more sense for me.
 
-for the case, i've decided to 3d print a **thin case**. it'll use a **screwless tray-mount design**, with the pcb sitting underneath the plate.
+for the controller, i'm using a USB-C Raspberry Pi Pico development board based on the RP2040. the keys will use a matrix with 1N4148 diodes, and i'll solder the switches directly to the PCB instead of using hot-swap sockets.
 
-i'll have to keep the whole thing under **$125**, but with the wireless stuff gone i've got a little more room to work with. now i can focus on getting the PCB and firmware right.
+for the case, i went with a thin 3d printed design. the idea is to use a screwless tray-mount layout, with the PCB sitting underneath the plate. i'll print it in PLA since i already have filament.
 
-**next up is finishing the schematic and figuring out the Raspberry Pi Pico pinout!**
+i picked Durock screw-in stabilisers for the larger keys. i had silicone O-rings in the BOM originally, but after getting feedback that they weren't worth the extra cost, i removed them too.
 
-_P.S. the keycaps are peak aren't they?_
+here's the updated BOM with the parts i'm planning to use:
 
-![](https://fabricate.hackclub-assets.com/864a1ae1934e3fb1d394971c5cadfb7b3b96cc668485bbbc8389e3acbd02f806/image.png)
+| Name | Purpose | Quantity | Unit Cost (USD) | Total Cost (USD) | Distributor |
+|---|---|---:|---:|---:|---|
+| [Akko V3 Fairy Pro Switches (Pack of 45)](https://stackskb.com/store/akko-fairy-pro-switch-pack-of-45/) | Mechanical switches | 2 packs | $16.00 | $32.00 | StacksKB |
+| [Lakes Mountains Premium Cherry PBT Extended Keycaps](https://curiositycaps.in/products/lakes-mountains-premium-cherry-pbt-extended-keycaps) | Keycaps | 1 | $29.00 | $29.00 | Curiosity Caps |
+| [Durock Clear Screw-In Stabilizers V2](https://stackskb.com/store/durock-clear-screw-in-stabilizers-v2/?attribute_combination=4%2B1+Set&attribute_spacebar-size=6.25U) | Stabilizers | 1 | $17.00 | $17.00 | StacksKB |
+| [1N4148 Through-Hole Diodes (Pack of 10)](https://stackskb.com/store/1n4148-through-hole-diode/) | Matrix diodes | 7 packs (70 diodes) | ~$0.2857 per pack of 10 | $2.00 | StacksKB |
+| [LuatOS USB-C Raspberry Pi Pico Development Board](https://makerbazar.in/products/luatos-usb-c-raspberry-pi-pico-development-board-based-on-rp2040-microcontroller) | Main controller | 1 | $5.00 | $5.00 | MakerBazar |
+| [Portronics Type-C to Type-C Cable](https://www.amazon.in/dp/B09Q8XMFHB?ref_=cm_sw_r_cp_ud_dp_9F8YCTNXZB2SQ3WDDXEK_1) | USB connection | 1 | $2.00 | $2.00 | Amazon |
+| [PLA Filament](https://india.numakers.com/products/pla-filament) | 3D-printed case | 1 | Already owned | $0.00 | NuMakers |
+| PCB | Keyboard circuit board | 5 | $5.00 per PCB | $25.00 | Offline/Local Fabricator |
+| **Total** | | | | **$112.00** | |
 
-**Total time spent: 6h**
+the budget is around $112 with any extra shipping or taxes. i'm trying not to spend money on features i don't really need, which is why i went with wired instead of wireless and removed the RGB and O-rings.
 
-# October 8, 2026: schematic done!
+![](https://cdn.hackclub.com/01a16177-0cd7-7064-a855-fcd0db6ef671/Screenshot_20250408_021218_Google.jpg.png)
+
+**Total time spent: 5h**
+
+**# October 8, 2026: schematic done!**
 <!-- fabricate:entry 202 -->
 
-i finally finished the **kaze schematic**.
+i finally finished the kaze schematic.
 
-the whole 5x15 matrix is wired up with the 68 keys and 1N4148 diodes, and the RP2040 is mapped to all the rows and columns.
+i made a 5x15 matrix for the 68 keys and added the 1N4148 diodes. the RP2040 is mapped to the rows and columns, so it can scan the keys without needing a separate pin for every switch.
 
-i also added all **80 SK6812MINI-E LEDs**, with 68 per-key LEDs and 12 underglow LEDs.
+i also added the RGB LEDs at this point because i was still considering them. that was 80 LEDs in total, with 68 for the keys and 12 for underglow. i ended up removing all of them when i moved on to the PCB, so they're not part of the final design.
 
-i spent a while just moving stuff around and making sure the schematic wasn't turning into a complete mess. getting everything to fit nicely on the sheet actually took longer than i expected lol.
+most of this stage was getting all the connections down and keeping the schematic readable. i moved things around a bit and checked the wiring because i didn't want to get halfway through the PCB and find out i'd missed something.
 
-i also went through the connections again before calling it done because i really don't wanna discover some random missing connection after starting the PCB.
+once everything was in place, i went through the connections again and called the schematic done. it was nice to finally have the circuit laid out instead of just having a list of parts and ideas.
 
-the nice thing is that everything is finally in one place now, so i can actually start working on the physical board instead of staring at a bunch of unfinished parts.
-
-so yeah, the **schematic is finally DONE**.
-
-next up: **PCB layout**.
+next up was the PCB layout.
 
 ![](https://fabricate.hackclub-assets.com/68e0bbbda73a226a6d7d7dc3b2dfb476c8695472de4f3f202f31ad4a2850537b/image-png/kaze.png)
 
 **Total time spent: 4h**
 
-# October 15, 2026: PCB done!
+**# October 15, 2026: PCB done!**
 <!-- fabricate:entry 488 -->
 
-now i finally finished the PCB design for Kaze!! after all the schematic work, component placement, figuring out footprints and routing, the design is finally finalised.
+now i finally finished the PCB design for kaze!! after the schematic, i started placing components, sorting out footprints and routing the connections.
 
-i made a bunch of changes along the way too. i removed the LEDs entirely and switched back to a wired Raspberry Pi Pico setup instead of wireless. basically, i'm keeping things simpler and focusing on getting the keyboard working properly rather than adding features just for the sake of it.
+this was also when i dropped the RGB LEDs completely. the schematic had them, but i didn't want to make the PCB more complicated just for lighting. the final plan is a wired keyboard with the RP2040, the key matrix and the diodes.
 
-the component placement is done, the PCB design is finalised, and i've started locking in the actual parts i'll be using. i'm looking at the Akko V3 Fairy Pro silent switches, Durock stabilizers, Lakes Mountains PBT keycaps and the other bits needed to bring Kaze to life.
+i also settled on the parts i'd actually be using: Akko V3 Fairy Pro silent switches, Lakes Mountains PBT keycaps and Durock stabilisers. i wanted the design to match the parts in my BOM instead of the stuff i was considering at the beginning.
 
-**next up:** designing the case! gotta figure out how the PCB, switches and everything else will fit together and give Kaze a proper look.
+getting the placement and routing done took some work, and i had to keep the switch layout and case in mind too. all of these parts need to fit together, so i wanted to get the PCB design sorted before moving further with the case.
+
+the PCB design is done, but i haven't had the board manufactured and tested as a complete keyboard yet. i'll still need to check everything when i can assemble it.
+
+next up: designing the case! gotta figure out how everything will fit together and make kaze look good too.
 
 ![](https://fabricate.hackclub-assets.com/5b3dc5d881adbb0112292c2902fb4b290991c19ca583f4d23cf4772bdebcd0f0/image-png/Screenshot%202026-10-15%20at%2010.32.51%E2%80%AFPM.png)
 ![](https://fabricate.hackclub-assets.com/96a1b1478c860e009688070f9f8338a7724addc2775445421d040ae804261d31/image-png/kaze-1.png)
 
 **Total time spent: 5h**
 
-# October 19, 2026: case design done!
+**# October 19, 2026: case design done!**
 <!-- fabricate:entry 690 -->
 
-made some solid progress on Kaze today! the case design is finally done, and i also added the silkscreen to the PCB.
+i finished the case design and worked on the PCB silkscreen too.
 
-for the PCB, i went with a Japanese-inspired aesthetic, adding detailed circuit-style artwork across the board, along with my website, GitHub, and the Kaze branding. also added the 風 character to match the whole theme.
+for the case, i stuck with a thin 3d printed design. i wanted it to fit the keyboard without making it too bulky, with the PCB sitting underneath the plate. i'll print it in PLA using filament i already have.
 
-it's finally starting to look like an actual keyboard instead of just a bunch of components on a PCB lol. seeing the board with the silkscreen makes it feel way more personal.
+i also added the plate to the design and put the keycaps into the render. before that, the render didn't really show what the finished keyboard would look like, so adding them makes it much easier to picture the final build.
 
-**next up:** firmware! once that's done, i'll submit the whole project for review and hopefully get Kaze one step closer to becoming a real keyboard.
+i also wanted the PCB to look a bit different instead of leaving it as a plain board. i went with a Japanese-inspired look and added circuit-style artwork, my website, GitHub and the Kaze branding. i added the 風 character as well because it fits the name and the theme.
 
-![](https://fabricate.hackclub-assets.com/edf31d55287a3fb696a85de66574d7920347d929d5f514af542ed4925adc8cdc/image-jpeg/0CDDF687-BB7B-4890-8138-25BED83FCE82_1_201_a.jpeg)
+i think the silkscreen makes the board look much more like my own project. with the plate and keycaps in the render, the whole thing is starting to look more like an actual keyboard.
+
+the case and PCB designs are ready for now, but i'll still need to check the fit properly once i have the physical parts. i haven't assembled the keyboard yet.
+
+next up: firmware! once that's done, i'll have the main designs ready for submission.
+
+![](https://cdn.hackclub.com/01a162fd-a105-7938-9b8f-ceaaf8e3ed8b/Screenshot%202026-10-22%20at%203.03.34%E2%80%AFPM.png)
 ![](https://fabricate.hackclub-assets.com/7daa18dc10c628b2ca838354ab6538a946e6e8e860d46245585f132beb88be4e/image-png/image%20%286%29.png)
 
 **Total time spent: 2h**
 
-# October 20, 2026: firmware done!
+**# October 20, 2026: firmware done!**
 <!-- fabricate:entry 766 -->
 
-i went with RMK instead of the usual QMK route, so getting everything set up was a bit of a journey. had to fix the cargo package name, sort out some keymap errors, and get the config right.
+i originally planned to use QMK, but i ended up going with RMK instead. getting it set up took a bit of debugging.
 
-after that, i managed to **compile the firmware locally** which successfully builds the UF2 for the raspberry pi pico.
+one issue was the Cargo package name. i'd named the project `Kaze.`, but Cargo wouldn't accept that name, so i had to change it. i also ran into some keymap errors and fixed the configuration before the firmware would build properly.
 
-the main thing i wanted to get done was the firmware, and that's done now. the schematic, pcb, case design and bom are also ready, so it's time to submit kaze.
+after sorting those out, i got the firmware to compile for the Raspberry Pi Pico and produce a UF2 file. that was the main thing i wanted to get working, and it was nice to finally have a build that worked after dealing with those errors.
 
-haven't tested the physical keyboard yet, but at least the firmware compiles.
+now i've got the schematic, PCB, case design, BOM and firmware ready.
 
-**next up: submitting kaze.**
+i still haven't tested the complete keyboard physically, so i can't say everything works together yet. i'll need to get the PCB made, put the parts together and test the keys once i can.
+
+for now, the design and firmware are ready, and kaze is ready to be submitted for review.
 
 ![](https://fabricate.hackclub-assets.com/e798a1595e27da25e0864d710e492bf8113d3a9d712de30d231a9cda7d0e27e1/image-png/image.png)
 
