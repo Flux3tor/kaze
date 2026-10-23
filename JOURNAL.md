@@ -3,7 +3,7 @@ title: "kaze."
 github: "https://github.com/Flux3tor/kaze"
 description: "A 65% wired silent mechanical keyboard."
 created_at: "2026-10-07"
-total_time: "18h"
+total_time: "19h"
 --- 
 
 # October 7, 2026: parts hunt!
@@ -101,8 +101,8 @@ the case and PCB designs are ready for now, but i'll still need to check the fit
 
 next up: firmware! once that's done, i'll have the main designs ready for submission.
 
-![](https://fabricate.hackclub-assets.com/edf31d55287a3fb696a85de66574d7920347d929d5f514af542ed4925adc8cdc/image-jpeg/0CDDF687-BB7B-4890-8138-25BED83FCE82_1_201_a.jpeg)
 ![](https://fabricate.hackclub-assets.com/7daa18dc10c628b2ca838354ab6538a946e6e8e860d46245585f132beb88be4e/image-png/image%20%286%29.png)
+![](https://fabricate.hackclub-assets.com/25b642652a3988f63fe5cc7588abcce7bcf3d423e6f26de860e5041af695e7d4/image-png/Screenshot%202026-10-22%20at%203.03.34%E2%80%AFPM.png)
 
 **Total time spent: 2h**
 
@@ -124,3 +124,20 @@ for now, the design and firmware are ready, and kaze is ready to be submitted fo
 ![](https://fabricate.hackclub-assets.com/e798a1595e27da25e0864d710e492bf8113d3a9d712de30d231a9cda7d0e27e1/image-png/image.png)
 
 **Total time spent: 2h**
+
+# October 23, 2026: fixes!
+<!-- fabricate:entry 1122 -->
+
+went back to Kaze after getting feedback from the reviewer and made some changes to the case and assembly.
+
+first, i added a way to actually screw the PCB into place instead of having it just sit inside the case. i'm using 2 M2 screws and 2 M2 brass inserts for this, which i already have, so i don't need to buy extra hardware.
+
+i also added ledges underneath the PCB so it has more places to rest on instead of hanging in the middle. this should help reduce flex when pressing keys.
+
+i haven't changed the USB-C cutout yet. i'm not completely sure about the exact position and clearance of the port on the controller board, so i've kept the opening broad rather than making it too tight and risking the cable not fitting. i'll need to check the actual fit before making the cutout more precise..
+
+there's still work to do before the physical keyboard is assembled, but i've made these changes to address the review feedback and make the design more complete.
+
+![](https://fabricate.hackclub-assets.com/ad2cd63ee22e205167351a96322e44463fc54c58601da85b4038504aaeb6e77a/image-png/Screenshot%202026-10-23%20at%208.43.12%E2%80%AFPM.png)
+
+**Total time spent: 1h**
