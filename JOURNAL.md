@@ -3,7 +3,7 @@ title: "kaze."
 github: "https://github.com/Flux3tor/kaze"
 description: "A 65% wired silent mechanical keyboard."
 created_at: "2026-10-07"
-total_time: "19h"
+total_time: "20h"
 --- 
 
 # October 7, 2026: parts hunt!
@@ -139,5 +139,22 @@ i haven't changed the USB-C cutout yet. i'm not completely sure about the exact 
 there's still work to do before the physical keyboard is assembled, but i've made these changes to address the review feedback and make the design more complete.
 
 ![](https://fabricate.hackclub-assets.com/ad2cd63ee22e205167351a96322e44463fc54c58601da85b4038504aaeb6e77a/image-png/Screenshot%202026-10-23%20at%208.43.12%E2%80%AFPM.png)
+
+**Total time spent: 1h**
+
+# October 24, 2026: more fixes!
+<!-- fabricate:entry 1183 -->
+
+got some more feedback about the case, so i went back into the CAD and fixed the mounting points.
+
+i already had mounting holes in the PCB and the Case, but i forgot to add the matching holes to the plate. i've added four mounting holes around the corners too now and added the matching holes to the plate and the case. this should make it easier to secure the assembly properly instead of having the PCB just sitting inside the case.
+
+i checked the full assembly export too, and ran into another annoying thing. the keycaps are there in the `.f3z` file, but when i export the assembly to `.STEP`, they don't seem to show up.
+
+at least the mounting holes are now in both the PCB and plate, and i'm getting closer to having all the CAD files match the intended build.
+
+![](https://fabricate.hackclub-assets.com/63e8e41995fcde4281fec4a181ffd87293205d206dc9966740b416c38b5cc9f1/image-png/Screenshot%202026-10-24%20at%208.12.40%E2%80%AFPM.png)
+![](https://fabricate.hackclub-assets.com/52449baa4ae36907815214b42f2bdc3cf1264587f04562bd7cfc0b0f51d922d7/image-png/Screenshot%202026-10-24%20at%208.12.59%E2%80%AFPM.png)
+![](https://fabricate.hackclub-assets.com/18f736779554b5fbae27b2ace2b6fa6b8ef845b6ae14f8716cfa859b92a5ed3d/image-png/Screenshot%202026-10-24%20at%208.14.09%E2%80%AFPM.png)
 
 **Total time spent: 1h**

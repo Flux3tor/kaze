@@ -526,7 +526,7 @@
       "netlist": "",
       "plot": "",
       "specctra_dsn": "",
-      "step": "../../Downloads/kaze.stl",
+      "step": "../../Downloads/kaze-pcb.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""

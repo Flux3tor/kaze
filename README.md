@@ -59,8 +59,8 @@ The firmware configuration is in [`Firmware/keyboard.toml`](Firmware/keyboard.to
 | [Portronics Type-C to Type-C Cable](https://www.amazon.in/dp/B09Q8XMFHB?ref_=cm_sw_r_cp_ud_dp_9F8YCTNXZB2SQ3WDDXEK_1) | USB connection | 1 | $2.00 | $2.00 | Amazon |
 | [PLA Filament](https://india.numakers.com/products/pla-filament) | 3D-printed case | 1 | Already owned | $0.00 | Numakers |
 | PCB | Keyboard circuit board | 5 | 25 | 25 | Offline/Local Fabricator |
-| M2 Screws | Case mounting | 2 | Already owned | $0.00 | Already owned |
-| M2 Brass Inserts | Case mounting inserts | 2 | Already owned | $0.00 | Already owned |
+| M2 Screws | Case mounting | 6 | Already owned | $0.00 | Already owned |
+| M2 Brass Inserts | Case mounting inserts | 6 | Already owned | $0.00 | Already owned |
 
 ## Total Pricing
 The total price comes out to be **₹10,600 ($112), including shipping, and taxes.**
